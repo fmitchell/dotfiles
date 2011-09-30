@@ -12,7 +12,7 @@
   branch = auto
   ui = auto
 [core]
-  excludesfile = /Users/rogerlopez/.gitignore
+  excludesfile = <%= print("User directory: "); STDOUT.flush; STDIN.gets.chomp %>/.gitignore
   editor = mate_wait
   autocrlf = input
 [apply]
