@@ -5,8 +5,8 @@
  * For use on any server to find the current environment.
  */
 $aliases['dev'] = array(
-  'uri' => 'energy.dev',
-  'root' => '/Users/tim/htdocs/energy.dev',
+  'uri' => 'anl.dev',
+  'root' => '/Users/tim/htdocs/anl.dev',
   'path-aliases' => array(
     '%dump-dir' => '/tmp/',
     '%files' => 'sites/development/files',
