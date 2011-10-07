@@ -1,5 +1,5 @@
 # This loads RVM into a shell session.
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"  
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
 
 # Terminal coloring
 export CLICOLOR=1
@@ -7,12 +7,22 @@ export CLICOLOR=1
 # Colorized Prompt
 PS1='\[\e[1;32m\][\u@\h \W]\$\[\e[0m\] '
 
-export EDITOR=/usr/bin/vi
+# Use vim as editor for commits, etc. Recognize if the MacVim app
+# is in ~/Applications, as `brew linkapps` will do.
+EDITOR="/Applications/MacVim.app/Contents/MacOS/Vim"
+[[ -d $HOME/Applications/MacVim.app ]] && EDITOR="${HOME}${EDITOR}"
+
+export EDITOR="${EDITOR}"
+alias vim=$EDITOR
+alias gvim=mvim
 
 #
 # borrowed from smerrill
 # https://github.com/smerrill/dotfiles/blob/master/.bashrc
 #
+
+# Put homebrew PHP ahead in $PATH a la http://justinhileman.info/article/reinstalling-php-53-on-mac-os-x/
+export PATH=$brew_prefix/sbin:$brew_prefix/bin:$PATH
 
 # Double-check that we are in an interactive session.
 [[ $- = *i* ]] || return
@@ -46,6 +56,9 @@ bash_prompt() {
   PS1="${UC}\u${B}@\h${RET_VALUE} ${EMY}\w${EMM}${GIT_INFO}${EMW}\n${NONE} "
   PS4='+$BASH_SOURCE:$LINENO:$FUNCNAME: '
 }
+
+# Always set up $HOME/bin in the front of $PATH.
+export PATH=$HOME/bin:$PATH
 
 # show return val of last command
 PROMPT_COMMAND='RET=$?'

@@ -7,3 +7,13 @@ function volume {
   arch -i386 osascript -e "set volume output volume $1"
 }
 
+# Paste to private gist.
+alias gaste="pbpaste | gist -p"
+
+# Easy ls -aFl
+alias ll="ls -aFl"
+
+alias php-ctags='ctags --langmap=php:.engine.inc.module.theme.php.install.test.profile --php-kinds=cdfi --languages=php --recurse --exclude="\.git" --exclude="\.svn" --exclude="\.hg" --exclude="\.bzr" --exclude="\CVS" --totals=yes --tag-relative=yes --regex-PHP="/abstract\s+class\s+([^ ]+)/\1/c/" --regex-PHP="/interface\s+([^ ]+)/\1/c/" --regex-PHP="/(public\s+|static\s+|abstract\s+|protected\s+|private\s+)function\s+\&?\s*([^ (]+)/\2/f/"'
+
+# for todo.txt
+alias td='todo.sh'
