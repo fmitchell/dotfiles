@@ -9,6 +9,7 @@ function volume {
 
 # Paste to private gist.
 alias gaste="pbpaste | gist -p"
+alias pist="pbpaste | gist -p"
 
 # Easy ls -aFl
 alias ll="ls -aFl"
@@ -17,3 +18,14 @@ alias php-ctags='ctags --langmap=php:.engine.inc.module.theme.php.install.test.p
 
 # for todo.txt
 alias td='todo.sh'
+
+#random
+alias treetunnel='ssh -CND *:9999 treehouse@dev.treehouseagency.com'
+
+#energy-related
+alias energy_cleandb='drush @energy.dev pm-disable securelogin acquia_agent -y && drush @energy.dev pm-enable devel dblog -y && drush @energy.dev ectrunc && drush @energy.dev updb -y && drush @energy.dev ectrunc && drush @energy.dev vset --always-set --yes less_devel 1 && drush @energy.dev vset --always-set --yes preprocess_css 0 && drush @energy.dev vset --always-set --yes preprocess_js 0 '
+alias doedev='ssh treehouse@dev.treehouseagency.com -t ssh tcosgrove@dev.cms.doe.gov'
+alias doestage='ssh treehouse@dev.treehouseagency.com -t ssh tcosgrove@stage.cms.doe.gov'
+alias doeweb1='ssh treehouse@dev.treehouseagency.com -t ssh tcosgrove@web1.cms.doe.gov'
+alias doeweb2='ssh treehouse@dev.treehouseagency.com -t ssh tcosgrove@web2.cms.doe.gov'
+alias doeutility='ssh treehouse@dev.treehouseagency.com -t ssh tcosgrove@utility.cms.doe.gov'

@@ -12,7 +12,42 @@ $aliases['dev'] = array(
     '%files' => 'sites/development/files',
   ),
 );
+$aliases['fmitchell'] = array(
+  'uri' => 'fmitchell.energy.dev',
+  'root' => '/Users/tim/htdocs/fmitchell.energy.dev',
+  'path-aliases' => array(
+    '%dump-dir' => '/tmp/',
+    '%files' => 'sites/development/files',
+  ),
+);
 
+$aliases['johnrobertwilson'] = array(
+  'uri' => 'johnrobertwilson.energy.dev',
+  'root' => '/Users/tim/htdocs/johnrobertwilson.energy.dev',
+  'path-aliases' => array(
+    '%dump-dir' => '/tmp/',
+    '%files' => 'sites/development/files',
+  ),
+);
+
+$aliases['selenium'] = array(
+  'uri' => 'selenium.energy.dev',
+  'root' => '/Users/tim/htdocs/selenium.energy.dev',
+  'path-aliases' => array(
+    '%dump-dir' => '/tmp/',
+    '%files' => 'sites/development/files',
+  ),
+);
+
+
+$aliases['achieve'] = array(
+  'uri' => 'achieve.energy.dev',
+  'root' => '/Users/tim/htdocs/achieve.energy.dev',
+  'path-aliases' => array(
+    '%dump-dir' => '/tmp/',
+    '%files' => 'sites/development/files',
+  ),
+);
 /**
  * For use on the Jenkins server to sync files / databases.
  */
